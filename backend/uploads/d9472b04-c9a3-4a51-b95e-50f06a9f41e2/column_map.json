@@ -1,0 +1,12 @@
+{
+  "file_key": "9f900331c4704add86b610f76a1b7d3c.csv",
+  "col_map": {
+    "date": "Date",
+    "quantity": "Quantity",
+    "total": "Total",
+    "city": "Branch",
+    "category": "Product line",
+    "cogs": "cogs",
+    "gross_income": "gross income"
+  }
+}

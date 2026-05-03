@@ -1,0 +1,24 @@
+{
+  "file_key": "36dcd10885d84784ad465495960c3157.csv",
+  "original_name": "supermarket_sales.csv",
+  "row_count": 1000,
+  "columns": [
+    "Invoice ID",
+    "Branch",
+    "City",
+    "Customer type",
+    "Gender",
+    "Product line",
+    "Unit price",
+    "Quantity",
+    "Tax 5%",
+    "Total",
+    "Date",
+    "Time",
+    "Payment",
+    "cogs",
+    "gross margin percentage",
+    "gross income",
+    "Rating"
+  ]
+}

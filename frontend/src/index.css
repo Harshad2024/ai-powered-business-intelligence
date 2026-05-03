@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 215 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 30% 25%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 215 85% 95%;
+    --accent-foreground: 215 90% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 215 90% 50%;
+
+    --radius: 0.625rem;
+
+    --sidebar-bg: 220 35% 12%;
+    --sidebar-fg: 220 15% 75%;
+    --sidebar-active: 215 90% 50%;
+    --sidebar-active-fg: 0 0% 100%;
+    --sidebar-hover: 220 30% 18%;
+    --sidebar-border: 220 25% 18%;
+
+    --success: 145 65% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 215 90% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(215 90% 50%), hsl(230 85% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(145 65% 42%), hsl(160 60% 45%));
+    --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%), hsl(25 95% 55%));
+    --gradient-purple: linear-gradient(135deg, hsl(265 80% 55%), hsl(280 75% 60%));
+
+    --shadow-card: 0 1px 3px 0 hsl(220 30% 15% / 0.04), 0 1px 2px -1px hsl(220 30% 15% / 0.04);
+    --shadow-card-hover: 0 4px 12px 0 hsl(220 30% 15% / 0.08), 0 2px 4px -1px hsl(220 30% 15% / 0.04);
+    --shadow-elevated: 0 10px 25px -5px hsl(220 30% 15% / 0.1), 0 4px 6px -2px hsl(220 30% 15% / 0.05);
+
+    --sidebar-background: 220 35% 12%;
+    --sidebar-foreground: 220 15% 75%;
+    --sidebar-primary: 215 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 18%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 220 25% 18%;
+    --sidebar-ring: 215 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  .gradient-warning {
+    background: var(--gradient-warning);
+  }
+  .gradient-purple {
+    background: var(--gradient-purple);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@media print {
+  /* Hide sidebar and nav */
+  aside, nav, header {
+    display: none !important;
+  }
+  
+  /* Reset background and text colors for clean printing */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Hide elements with print-hidden class */
+  .print-hidden {
+    display: none !important;
+  }
+
+  /* Force page breaks for clean sections */
+  .print-break-before {
+    page-break-before: always;
+  }
+
+  /* Adjust main content area to take full width */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Ensure charts and cards print backgrounds */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
